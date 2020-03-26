@@ -11,6 +11,9 @@ jobs:
           steps:
             - run: npm install
             - run:
+                name: Rebuild node-sass
+                command: npm rebuild node-sass
+            - run:
                name: Building HTML
                command: npm run build
 workflows:
