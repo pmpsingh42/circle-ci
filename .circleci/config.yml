@@ -9,6 +9,11 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+          - run:
+          name: Install AWS CLI
+          command: |
+                 apk --no-cache add py-pip
+                  pip install awscli
             - run: npm install
             - run:
                 name: Rebuild node-sass
